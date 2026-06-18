@@ -1,0 +1,15 @@
+PROGRAM PRG_Blinking_Light
+VAR
+	Blink_Light : FB_Blink;
+	Light : ARRAY[1..5] OF BOOL;
+END_VAR
+
+// Execute the FB every scan
+Blink_Light();   // ← THIS makes the timers run
+
+// Read outputs
+Light[1] := Blink_Light.Blink100ms;
+Light[2] := Blink_Light.Blink250ms;
+Light[3] := Blink_Light.Blink500ms;
+Light[4] := Blink_Light.Blink750ms;
+Light[5] := Blink_Light.Blink1000ms;
